@@ -1,0 +1,37 @@
+﻿@model Price
+
+@{
+    ViewData["Title"] = "Price Quotation";
+}
+
+<h2>@ViewData["Title"]</h2>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="PriceQuotation">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div>
+                <label asp-for="Subtotal"></label>
+                <input asp-for="Subtotal"/>
+                <span asp-validation-for="Subtotal"></span>
+            </div>
+            <div>
+                <label asp-for="DiscountPercent"></label>
+                <input asp-for="DiscountPercent"/>
+                <span asp-validation-for="DiscountPercent"></span>
+            </div>
+            <div>
+                <label asp-for="DiscountAmount"></label>
+                <div asp-for="DiscountAmount"></div>
+                <span asp-validation-for="DiscountAmount"></span>
+            </div>
+            <div>
+                <label asp-for="Total"></label>
+                <div asp-for="Total"></div>
+                <span asp-validation-for="Total"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create"/>
+            </div>
+        </form>
+    </div>
+</div>
