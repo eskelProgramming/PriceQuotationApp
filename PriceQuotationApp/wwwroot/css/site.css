@@ -18,5 +18,28 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  margin-bottom: .1em;
+}
+
+h2 {
+    color: darkblue;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.form-label {
+    width: 35%;
+    margin-right: .5em;
+}
+
+.form-input {
+    flex: 1;
+}
+
+.form-value {
+    flex: 1;
 }

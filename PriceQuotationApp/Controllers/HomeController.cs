@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using PriceQuotationApp.Models;
-using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 
 namespace PriceQuotationApp.Controllers
@@ -17,7 +16,7 @@ namespace PriceQuotationApp.Controllers
         [HttpGet]
         public IActionResult PriceQuotation()
         {
-            return View();
+            return View(new Price());
         }
 
         [HttpPost]
@@ -26,13 +25,12 @@ namespace PriceQuotationApp.Controllers
             if (ModelState.IsValid)
             {
                 price.Calculate();
-
                 return View(price);
             }
             else
             {
                 return View(price);
-            }            
+            }
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

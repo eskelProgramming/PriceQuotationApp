@@ -17,7 +17,6 @@ namespace PriceQuotationApp.Models
         public void Calculate()
         {
             DiscountAmount = Subtotal * DiscountPercent / 100;
-
             Total = Subtotal - DiscountAmount;
         }
     }
