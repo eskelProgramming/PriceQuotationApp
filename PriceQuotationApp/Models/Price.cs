@@ -10,9 +10,9 @@ namespace PriceQuotationApp.Models
         [Range(0, 100)]
         public int DiscountPercent { get; set; }
 
-        public double DiscountAmount { get; private set; }
+        public double DiscountAmount { get; private set; } = 0.00;
 
-        public double Total { get; private set; }
+        public double Total { get; private set; } = 0.00;
 
         public void Calculate()
         {
